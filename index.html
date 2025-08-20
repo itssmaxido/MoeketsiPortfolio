@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moeketsi Nteo Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!----------HEADER------------>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.jpeg" alt="logo" class="logo">
+        <ul id="nav-links">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+
+      <div class="header-text">
+        <h3>Hello, I'm</h3>
+        <h1>Moeketsi Nteo</h1>
+        <div class="position">
+          <p>IT specialist and IoT developer</p>
+        </div>
+
+        <div class="btn-group">
+          <a href="images/MoeketsiCV.pdf" download class="btn">Download CV</a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com/itssmaxido/dev.git" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/moeketsi-nteo-5867631b4" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/about.jpeg" alt="Profile Picture">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>I’m Moeketsi Nteo, a driven and curious tech enthusiast with an NCV Level 4 
+            in Information Technology and Computer Science. I enjoy exploring different 
+            areas of tech, from programming and hardware projects to creative 
+            problem-solving with everyday technology.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
+            <p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
+            <p class="tab-links" onclick="opentab(event,'education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+              <li><span>IoT Development</span><br>Microcontrollers, sensors, protocols</li>
+              <li><span>Software Development</span><br>VB.NET programming</li>
+              <li><span>Embedded Systems</span><br>C++, Arduino programming</li>
+              <li><span>Database Management</span><br>Design, queries, and maintenance</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>02/2023 - 11/2023</span><br>Tutor (Tshwane South College)</li>
+              <li><span>03/2025 - 07/2025</span><br>IoT Developer (GreyCode)</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Completed-2024</span><br>NCV 4 in Information Technology and Computer Science</li>
+              <li><span>Completed-2023</span><br>NCV 3 in Information Technology and Computer Science</li>
+              <li><span>Completed-2022</span><br>NCV 2 in Information Technology and Computer Science</li>
+              <li><span>Completed-2020</span><br>Matric</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-----------------PROJECTS------------------->
+<div id="projects">
+  <div class="container">
+    <h1 class="sub-title">My Projects</h1>
+    
+    <div class="row project-row">
+
+      <!--image overlay-->
+      <div class="project-col-1">
+        <div class="work">
+          <img src="images/airmouse.jpeg" alt="Air mouse">
+          <div class="layer">
+            <h3>Air Mouse</h3>
+            <p>Click below for full video demo</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!--Project description-->
+      <div class="project-col-2">
+        <h2 class="project-title"><span class="air">Air</span>Mouse 
+        <span class="subtitle">- Gesture-Controlled Wireless Cursor</span></h2>
+        <p>Experience the future of computing with a motion-controlled Air Mouse! 
+            This device uses a gyroscope sensor and a GreyCode microcontroller to translate 
+            hand gestures into precise cursor movements.</p>
+        <ul>
+          <li>Perfect for presentations, gaming, or hands-free navigation.</li>
+          <li>Lightweight, ergonomic, and highly responsive.</li>
+          <li>Customizable for different gestures and functions.</li>
+        </ul>
+        <a href="images/Documentation.pdf" class="btn2">See more</a>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+  <!--------------CONTACT---------------->
+<div id="contact">
+  <div class="input-box">
+    <h1 class="sub-title">Contact Me</h1>
+    <form id="email-form">
+      <div class="input">
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+      </div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <div class="contact-info">
+  <p>
+    <i class="fa-solid fa-envelope">: </i> 
+    <a href="mailto:moeketsinteo08@gmail.com" style="color:#00aaff;">moeketsinteo08@gmail.com</a>
+  </p>
+  <p>
+    <i class="fa-solid fa-phone">: </i> 
+    <a href="tel:0723578059" style="color:#00aaff;">0723578059</a>
+  </p>
+</div>
+
+    <div class="socials">
+      <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/moeketsi-nteo-5867631b4" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/itssmaxido/#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@itssmaxido" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/share/1EzjR4uC2p/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+  </div>
+</div>
+
+  <!-- FOOTER -->
+  <footer>
+    <ul>
+      <li><a href="#header">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="copyright">© All Rights Reserved | Moeketsi Nteo</p>
+  </footer>
+
+
+<script>
+  //Tabs switching
+  function opentab(evt, tabname) {
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    for (let t of tablinks) t.classList.remove("active-link");
+    for (let c of tabcontents) c.classList.remove("active-tab");
+
+    evt.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+  //Contact form validation
+  const form = document.querySelector('#contact form');
+  form.addEventListener('submit', function(e) {
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !subject || !message) {
+      alert("Please fill in all fields before submitting.");
+      e.preventDefault();
+    }
+  });
+
+  //Mobile menu toggle
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+
+  //Closing the mobile menu on nav link click
+  document.querySelectorAll('#nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
+
+

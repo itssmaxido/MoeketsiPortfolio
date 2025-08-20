@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080808;
+  color: #fff;
+}
+
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/website.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  padding: 10px 10%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 140px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #00aaff;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#nav-links {
+  transition: all 0.3s ease-in-out;
+}
+
+#nav-links.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 10%;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 16px;
+}
+
+.header-text {
+  margin-top: 18%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.header-text h3 {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.position {
+  color: #00aaff;
+}
+.position span:hover {
+  color: white;
+}
+
+.btn-group {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 20px;
+  border-radius: 48px;
+  padding: 8px 24px;
+  border: 2px solid #00aaff;
+  cursor: pointer;
+  font-weight: 500;
+  text-wrap: nowrap;
+  transition: 0.5s ease-in-out;
+  color: white;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #00aaff;
+}
+
+.socials {
+  display: flex;
+  gap: 32px;
+}
+
+.socials i {
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.socials i:hover {
+  transform: scale(1.08);
+  text-shadow: 0 0 8px rgba(0, 170, 255, 0.6);
+  color: #00aaff;
+}
+
+/*---------about----------*/
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+.about-col-2 {
+  flex-basis: 60%;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+  flex-wrap: wrap;
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: #00aaff;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 100%;
+}
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  color: #00aaff;
+  font-size: 14px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+
+/*---------project----------*/
+#projects {
+  padding: 80px 0;
+  color: #ababab;
+}
+
+.project-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.project-title .air {
+  color: #00aaff; 
+}
+
+.project-title .subtitle {
+  font-size: 24px; 
+  font-weight: 500;
+  color: #fff;
+  margin-left: 8px;
+}
+
+.project-col-1 {
+  flex-basis: 35%;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #00aaff);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer a {
+  margin-top: 20px;
+  color: #00aaff;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.project-col-2 {
+  flex-basis: 60%;
+}
+.project-title {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+.btn2 {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #00aaff;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.5s;
+}
+.btn2:hover {
+  background: #00aaff;
+}
+
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.project-col-2 ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 15px 0;
+  color: #ddd;
+}
+
+.project-col-2 ul li {
+  margin: 8px 0;
+}
+
+
+/*---------contac------------*/
+#contact {
+  padding: 100px 0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  gap: 30px; 
+}
+
+.input input {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 2px solid #00aaff;
+  font-size: 16px;
+  background: #111;
+  color: #fff;
+  margin-bottom: 10px; 
+}
+
+#contact .btn {
+  color: black;          
+  background-color: #00aaff; 
+  border: none;          
+  padding: 16px 24px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-bottom: 10px;
+}
+
+#contact .btn:hover {
+  background-color: #0077cc; 
+  color: black;              
+}
+
+#contact .socials {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#contact .contact-info i {
+  margin-right: 8px;
+  color: #00aaff;
+}
+
+#contact .contact-info a {
+  text-decoration: none; 
+  color: #00aaff;
+}
+
+#contact .socials i {
+  font-size: 36px; 
+  color: #1f054b;  
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#contact .socials i:hover {
+  transform: scale(1.3); 
+  color: #0077cc;        
+}
+
+/*------------footer-------------*/
+footer {
+  bottom: 0;
+  left: 0;
+  height: auto;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+footer ul li a {
+  font-weight: 600;
+  color: #00aaff;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  color: white;
+}
+.copyright {
+  font-size: 12px;
+  margin-top: 16px;
+  color: #777;
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+
+#about, #projects, #contact {
+  scroll-margin-top: 80px; /*adjust based on header height*/
+}
+
+/*--------------Responsive--------------*/
+@media screen and (max-width: 600px) {
+  #header {
+    background-image: url(images/moeketsi.png); /*Mobile image*/
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-col-1, .about-col-2,
+  .project-col-1, .project-col-2 {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .header-text h1 {
+    font-size: 42px;
+  }
+  .header-text h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .header-text h1 {
+    font-size: 34px;
+  }
+  .header-text h3 {
+    font-size: 18px;
+  }
+  .sub-title {
+    font-size: 40px;
+  }
+  .project-title {
+    font-size: 28px;
+  }
+}
+
+
